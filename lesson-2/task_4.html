@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task#4</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    /*
+    Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя параметрами.
+    Т.е. например, функция для сложения должна принимать два числа, складывать их и возвращать результат.
+    Обязательно использовать оператор return.
+    */
+
+    let a = +prompt("Введите первое число:")
+    let b = +prompt("Введите первое число:")
+    alert(`Сумма = ${my_sum(a, b)};Разность = ${my_diff(a, b)};Произведение = ${my_multi(a, b)};Частное = ${my_div(a, b)}`)
+
+
+    /**
+     * Сумма двух значений.
+     *
+     * @param  {number} a,b  - Действительные числа.
+     * @return {number} Сумма
+     *
+     * @static
+     */
+    function my_sum(a, b) {
+        return a + b;
+    }
+
+    /**
+     * Разность двух значений.
+     *
+     * @param  {number} a,b  - Действительные числа.
+     * @return {number} Разность
+     *
+     * @static
+     */
+    function my_diff(a, b) {
+        return a - b;
+    }
+
+    /**
+     * Произведение двух значений.
+     *
+     * @param  {number} a,b  - Действительные числа.
+     * @return {number} Произведение
+     *
+     * @static
+     */
+    function my_multi(a, b) {
+        return a * b;
+    }
+
+    /**
+     * Деление двух значений.
+     *
+     * @param  {number} a,b  - Действительные числа.
+     * @return {number} Деление
+     *
+     * @static
+     */
+    function my_div(a, b) {
+        return a / b;
+    }
+
+
+</script>
+</body>
+</html>

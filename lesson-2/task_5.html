@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task#4</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    /*
+    Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+    где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+    переданного значения операции (использовать switch) выполнить одну из арифметических операций
+    (использовать функции из задания 4) и вернуть полученное значение.
+    */
+
+    let a = +prompt("Введите первое число:");
+    let b = +prompt("Введите первое число:");
+    let oper = prompt("Введите операцию (+ или - или * или \\):");
+    let result=mathOperation(a, b, oper);
+    if (result != null) {alert(`Выражение: ${a} ${oper} ${b} = ${result}`);}
+
+    /**
+     * Выполнение арифметической операции
+     *
+     * @param  {number} a,b  - Действительные числа.
+     * @param  {char} operation - операция
+     * @return {null} результат
+     *
+     * @static
+     */
+    function mathOperation(arg1, arg2, operation) {
+
+        let result=null;
+
+        switch (operation) {
+            case "+":
+                return my_sum(arg1, arg2);
+            case "-":
+                return my_diff(arg1, arg2);
+            case "*":
+                return my_multi(arg1, arg2);
+            case "\\":
+                return my_div(arg1, arg2);
+            default:
+                console.log(`Операция ${operation} task_5.htmlне известна...`)
+        }
+        return result;
+    }
+
+    /**
+     * Сумма двух значений.
+     *
+     * @param  {number} a,b  - Действительные числа.
+     * @return {number} Сумма
+     *
+     * @static
+     */
+    function my_sum(a, b) {
+        return a + b;
+    }
+
+    /**
+     * Разность двух значений.
+     *
+     * @param  {number} a,b  - Действительные числа.
+     * @return {number} Разность
+     *
+     * @static
+     */
+    function my_diff(a, b) {
+        return a - b;
+    }
+
+    /**
+     * Произведение двух значений.
+     *
+     * @param  {number} a,b  - Действительные числа.
+     * @return {number} Произведение
+     *
+     * @static
+     */
+    function my_multi(a, b) {
+        return a * b;
+    }
+
+    /**
+     * Деление двух значений.
+     *
+     * @param  {number} a,b  - Действительные числа.
+     * @return {number} Деление
+     *
+     * @static
+     */
+    function my_div(a, b) {
+        return a / b;
+    }
+
+
+</script>
+</body>
+</html>
